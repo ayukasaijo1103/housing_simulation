@@ -1,0 +1,26 @@
+.content{
+    font-size: 1.275rem;
+    text-align: center;
+    margin-top: 300px;
+    border: double 4px;
+    width: 600px;
+    font-family: serif;
+}
+.line{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 50px;
+    font-family: serif;
+    font-weight: 500;
+    background-color: aliceblue;
+}
+
+body{
+    background-color: rgba(135,206,250,0.65);
+}
+

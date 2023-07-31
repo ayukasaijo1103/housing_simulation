@@ -1,0 +1,129 @@
+#loading{
+    background-color: grey;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+}
+
+button{
+    border: solid 2px gray;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+button :hover{
+    background-color: grey;
+}
+
+button {
+    border-radius: 15%;
+    background-color: white;
+    transition: background-color .5s;
+    padding: 6px 5px;
+}
+#title{
+    font-family: 'Zen Maru Gothic', sans-serif;    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+p{
+    font-family: 'Noto Serif JP', serif;
+}
+
+#caption{
+    text-align: center;
+    margin-top: 20px;
+}
+
+input{
+    border: solid 2px gray;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.form{
+    margin-top: 100px;
+    justify-content: center;    
+    display: flex;
+}
+
+.button{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.275rem;
+}
+.button input:hover{
+    background-color: grey;
+}
+
+.button input{
+    border-radius: 15%;
+    background-color: white;
+    transition: background-color .5s;
+    padding: 6px 5px;
+}
+
+.all{
+    z-index: 2;
+}
+
+html{
+    background-color: rgba(135,206,250,0.65);
+    height: 100vh;
+
+}
+
+.fluid {
+    width:30vh;/*横幅*/
+    height: 30vh;/*縦幅*/
+    background:#fff100;/*背景色*/
+    animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+    position: relative;
+    z-index: 3;
+    margin-left: 50px;
+    margin-top: 50px;
+    border: white solid 3px;
+  }
+
+  .all .fluid{
+    float: right;
+    margin-top: -90px;
+    
+  }
+  
+  @keyframes fluidrotate {  
+        
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+        
+  }
+
+#loading img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>金利額シュミレーション</title>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <!--CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!--Google Font-->
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:wght@600&family=Cutive+Mono&family=Dancing+Script&family=Hachi+Maru+Pop&family=Josefin+Slab:wght@300&family=Klee+One&family=Noto+Serif:wght@100&family=Quicksand:wght@300&family=Rampart+One&family=Sawarabi+Gothic&family=Slackside+One&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:wght@600&family=Cutive+Mono&family=Dancing+Script&family=Hachi+Maru+Pop&family=Josefin+Slab:wght@300&family=Klee+One&family=Noto+Serif+JP:wght@200&family=Noto+Serif:wght@100&family=Quicksand:wght@300&family=Rampart+One&family=Sawarabi+Gothic&family=Slackside+One&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:wght@600&family=Cutive+Mono&family=Dancing+Script&family=Hachi+Maru+Pop&family=Josefin+Slab:wght@300&family=Klee+One&family=Noto+Serif+JP:wght@200&family=Noto+Serif:wght@100&family=Quicksand:wght@300&family=Rampart+One&family=Sawarabi+Gothic&family=Slackside+One&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">        
+        <!--javascript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/html2pdf.js"></script>
+        <script src="js/first.js" defer></script>
+
+        <script>
+            // function createPDF() {
+                // get the element of ticket content.
+                // const docElement = document.getElementsById('ticket');
+                // select the element and save as the PDF.
+                // html2pdf().from(docElement).save();
+            // }
+        </script>
+    </head>
+    <body>
+        <!--loading画面-->
+        <div id="loading">
+            <img src="images/loading_icon.png" alt="">
+        </div>
+        <div class="fluid"></div>
+
+    <div class="all">
+        <section>
+        <h1 id="title">金利額シュミレーション</h1>
+        <p id="caption"><span class="headline">借り入れた金額と金利によって金利総額が一目でわかる</span></p>
+        </section>
+        <div class="form">
+            <form action="1st.php" method="post">
+                <p>
+                    <label>借入金額：</label>
+                    <input type="text" name="money">円
+                </p>
+                <p>
+                    <label>返済年数：</label>
+                    <input type="text" name="years">年
+                </p>
+                <p id="ticket">
+                    <label>金　　利：</label>
+                    <input type="text" name="rate">%
+                </p>
+                    <p class="button">
+                    <input type="submit" value="PUSH">
+                </p>
+            </form>
+        </div>
+        <div class="fluid"></div>
+        <!-- <button onclick="createPDF()">Download</button> -->
+    </div>
+
+    </body>
+</html>
