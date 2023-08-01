@@ -36,3 +36,20 @@ window.addEventListener('load',()=>{
     );
 });
 
+const caption=(entries)=>{
+    const keyframes={
+    opacity:[0,1],
+    translate:['0 50px',0],
+};
+const options={
+    duration:7000,
+    easing:'ease',
+    fill:'forwards',
+};
+entries[0].target.animate(keyframes,options);
+};
+
+//監視ロボットの設定
+const captionobserver=new IntersectionObserver(caption);
+//#captionを監視するように指示
+captionobserver.observe(document.querySelector('#caption'));
