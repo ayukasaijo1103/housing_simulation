@@ -24,3 +24,17 @@ body{
     background-color: rgba(135,206,250,0.65);
 }
 
+p{
+    font-size: 1.275rem;
+    text-align: center;
+    margin-top: 150px;
+    border: double 4px;
+    width: 600px;
+    font-family: serif;
+}
+
+.error{
+    display: grid;
+    justify-content: center;
+
+}
