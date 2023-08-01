@@ -14,19 +14,10 @@ if(!((1<$years) && ($years<41))){
 }
 if(!(0<$rate)){
     echo '<div class=error><p>金利を正しく入力してください</p></div>';
+    echo '<div class=btn><a href="."index.html"."><p class=button><input type=submit value=戻る></p></a></div>';
     exit;
 }
 //月々の返済金額
 $month=$total_money * $rate / 100 / 12;
 echo '<div class=line><div class=content>年間返済額:' . $total_money / $years . '円<br>月々の返済額:'. $total_money / $years /12 . '円<br>1ヶ月目の返済金利額:' . $month . '円 </div></div>' ;
-
-require_once('tcpdf_config.php');
-$pdf = new TCPDF($orientation,$unit,$format,$unicode,$encoding,$diskcache,$pdfa);
-$pdf ->addPage();
-$pdf ->setFont('kozgopromedium','B',10);
-$html = <<< EOF
-HTML文章
-EOF;
-$pdf ->writeHTML($html);
-$pdf ->Output(file,I);
 
