@@ -26,12 +26,39 @@ if(!(0<$rate)){
 
 //月々の返済金額
 $month=$total_money * $rate / 100 / 12;
+$year_month=$total_money/$years;
+$month_money=$total_money/$years/12;
 $coment= '<div class=line><div class=content>年間返済額:' . $total_money / $years . '円<br>月々の返済額:'. $total_money / $years /12 . '円<br>1ヶ月目の返済金利額:' . $month . '円 </div></div>' ;
 $month=(string)$month;
 
 $html = <<< EOF
-$month
-<a href="download.php?nickname=$coment">ダウンロード</a>
+<style>
+p{
+    display:flex;
+    justify-content: center;
+}
+.top{
+    margin-top:  250px;
+}
+a{
+    text-decoration:none;
+    color:black;
+    border:solid 2px red;
+    display:flex;
+    justify-content: center;
+    margin-left:720px;
+    margin-right:720px;
+    border-radius:10%;
+}
+a:hover{
+    color:grey;
+}
+
+</style>
+<p class="top">年間返済額：$year_month 円</p>
+<p>月々の返済額：$month_money 円</p>
+<p>1ヶ月目の返済金利額:$month 円</p>
+<a href="download.php?nickname=$coment">PDF</a>
 
 EOF;
 
